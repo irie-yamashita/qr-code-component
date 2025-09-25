@@ -3,13 +3,23 @@
     src: url('./fonts/Outfit-VariableFont_wght.ttf');
 }
 
-body {
+:root {
+  --slate-300: hsl(212, 45%, 89%);
+  --slate-500: hsl(216, 15%, 48%);
+  --slate-900: hsl(218, 44%, 22%);
+}
+
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
 
+body {
     height: 100dvh;
 
-    background-color: hsl(212, 45%, 89%);
+    background-color: var(--slate-300);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,16 +27,30 @@ body {
     font-family: 'Outfit';
 }
 
-main {
-    background-color: hsl(0, 0%, 100%);
-    width: 250px;
-    padding: 20px;
+.qr-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+    background-color: white;
+    max-width: 300px;
+    padding: 15px;
+    padding-bottom: 30px;
 
     text-align: center;
 
     box-shadow: 8px 10px 15px -3px hsl(218, 44%, 22%, 10%);
     border-radius: 1rem;
 
+}
+
+.qr-container div {
+    padding: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 img {
@@ -36,15 +60,15 @@ img {
     border-radius: 0.5rem;
 }
 
-h1 {
+.qr-title {
     font-size: 20px;
     font-weight: 700;
-    color: hsl(218, 44%, 22%);
+    color: var(--slate-900);
 
 }
 
-p {
+.qr-text {
     font-size: 15px;
     font-weight: 400;
-    color: hsl(216, 15%, 48%);
+    color: var(--slate-500);
 }
